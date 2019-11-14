@@ -1,0 +1,3 @@
+Override - keyword that says to go up in heirarchy and override the method in parent class
+virtual - keyword that used to declare a parent method so that methods in child class is allowed to override the parent class method
+Super - makes sure the superclass is called.
