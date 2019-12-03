@@ -4,12 +4,65 @@
 #include "pch.h"
 #include <iostream>
 
-int get
+int GetSize(int x)
+{
+	return x;
+}
+
+int GetSize(std::string x)
+{
+	return x.length();
+}
+
+class Animal
+{
+public:
+	virtual void MakeNoise()
+	{
+		std::cout << "Animal noise..." << std::endl;
+	}
+};
+
+class Dog : public Animal
+{
+public:
+	void MakeNoise()
+	{
+		std::cout << "Woof..." << std::endl;
+	}
+};
+
+class Cat : public Animal
+{
+public:
+	void MakeNoise()
+	{
+		std::cout << "meawoo..." << std::endl;
+	}
+};
+
+void Stroke(Animal animal)
+{
+	animal.MakeNoise();
+}
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	std::cout << GetSize(5) << std::endl;
+	std::cout << GetSize("Hello World") << std::endl;
+
+	Dog dog;
+	Cat cat;
+	Stroke(dog);
+	Stroke(cat);
+
+	return 0;
 }
+
+
+
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
