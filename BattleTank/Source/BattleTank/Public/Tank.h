@@ -6,6 +6,8 @@
 #include "TankAimingComponent.h" 
 #include "Tank.generated.h"
 
+class UTankBarrel;
+
 UCLASS()
 class BATTLETANK_API ATank : public APawn
 {
@@ -22,7 +24,7 @@ private:
 	ATank();
 
 	UFUNCTION(BlueprintCallable, Category = "Setup")
-	void  SetBarrelReference(UStaticMeshComponent* BarrelToSet);
+	void  SetBarrelReference(UTankBarrel* BarrelToSet);
 
 
 	// Called when the game starts or when spawned
