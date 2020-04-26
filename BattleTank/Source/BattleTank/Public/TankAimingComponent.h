@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Components/ActorComponent.h"
-#include "Kismet/GameplayStatics.h"
 #include "Components/StaticMeshComponent.h"
 #include "TankAimingComponent.generated.h"
 
@@ -31,4 +30,6 @@ private:
 	UTankBarrel* Barrel = nullptr;
 
 	void MoveBarrelTowards(FVector AimDirection);
+
+	bool bWantsBeginPlay;
 };
