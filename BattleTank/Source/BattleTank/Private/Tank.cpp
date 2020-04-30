@@ -2,6 +2,8 @@
 
 
 #include "BattleTank.h"
+#include "TankBarrel.h"
+#include "TankTurret.h"
 #include "TankAimingComponent.h"
 #include "Tank.h"
 
@@ -16,6 +18,12 @@ ATank::ATank()
 void ATank::SetBarrelReference(UTankBarrel * BarrelToSet)
 {
 	TankAimingComponent->SetBarrelRererence(BarrelToSet);
+
+}
+
+void ATank::SetTurretReference(UTankTurret* TurretToSet)
+{
+	TankAimingComponent->SetTurretRererence(TurretToSet);
 }
 
 // Called when the game starts or when spawned

@@ -3,10 +3,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
-//#include "TankAimingComponent.h" 
 #include "Tank.generated.h"
 
 class UTankBarrel;
+class UTankTurret;
 class UTankAimingComponent;
 
 UCLASS()
@@ -27,6 +27,9 @@ private:
 	UFUNCTION(BlueprintCallable, Category = "Setup")
 	void  SetBarrelReference(UTankBarrel* BarrelToSet);
 
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+	void  SetTurretReference(UTankTurret* TurretToSet);
+
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override; 
@@ -35,5 +38,5 @@ private:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	UPROPERTY(EditAnywhere, Category = Firing)
-	float LaunchSpeed = 100000; // TODO find sensible starting value 
+	float LaunchSpeed = 4000; 
 };
